@@ -1,0 +1,12 @@
+{
+  "name": "parcial-calidad-software",
+  "version": "1.0.0",
+  "description": "Proyecto de parcial - CI/CD con GitHub Actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["ci", "cd", "testing"],
+  "author": "",
+  "license": "ISC"
+}
