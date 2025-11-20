@@ -78,7 +78,9 @@ Para simular lo que hace GitHub Actions:
 ```bash
 npm run lint
 npm test
+![alt text](image.png)
 npm run test:coverage
+![alt text](image-1.png)
 ```
 
 O en una sola línea:
