@@ -87,24 +87,6 @@ O en una sola línea:
 npm run lint && npm test && npm run test:coverage
 ```
 
-## Estructura del proyecto
-
-```
-.
-├── src/
-│   ├── calculadora.js
-│   └── validador.js
-├── tests/
-│   ├── calculadora.test.js
-│   └── validador.test.js
-├── .github/
-│   └── workflows/
-│       └── ci-quality.yml
-├── .eslintrc.json
-├── jest.config.js
-└── package.json
-```
-
 ## Pipeline CI/CD
 
 El workflow `ci-quality.yml` se ejecuta en cada push o pull request a la rama main.
@@ -126,22 +108,6 @@ Si algún paso falla, el pipeline se detiene y el run se marca como fallido.
 
 `act` es una herramienta que permite ejecutar GitHub Actions localmente usando Docker. Esto permite probar los workflows antes de hacer push al repositorio.
 
-### Requisitos
-
-- Docker instalado y en ejecución
-- act instalado (https://github.com/nektos/act)
-
-### Instalación de act
-
-**Windows (con Chocolatey):**
-```bash
-choco install act-cli
-```
-
-**Linux/Mac:**
-```bash
-curl https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
-```
 
 ### Ejecutar el workflow localmente
 
