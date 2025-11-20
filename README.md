@@ -10,17 +10,82 @@ Proyecto de CI/CD con GitHub Actions, linters y pruebas automatizadas.
 - **Herramienta de cobertura**: Jest (integrado)
 - **CI/CD**: GitHub Actions
 
-## Instalación
+## Requisitos previos
+
+- Node.js v18 o superior
+- npm (viene con Node.js)
+- Git
+
+## Instalación y configuración
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/tu-usuario/Parcial-3.git
+cd Parcial-3
+```
+
+### 2. Instalar dependencias
 
 ```bash
 npm install
 ```
 
-## Scripts disponibles
+Esto instalará todas las dependencias necesarias definidas en `package.json`:
+- ESLint (linter)
+- Jest (testing y cobertura)
 
-- `npm run lint` - Ejecuta el linter ESLint
-- `npm test` - Ejecuta las pruebas unitarias
-- `npm run test:coverage` - Ejecuta pruebas con reporte de cobertura
+## Cómo ejecutar el proyecto
+
+### Ejecutar el linter
+
+Verifica que el código cumple con las reglas de estilo:
+
+```bash
+npm run lint
+```
+
+**Salida esperada**: Sin errores si el código está bien formateado.
+
+### Ejecutar las pruebas
+
+Ejecuta todos los tests unitarios:
+
+```bash
+npm test
+```
+
+**Salida esperada**: 
+```
+Test Suites: 2 passed, 2 total
+Tests:       19 passed, 19 total
+```
+
+### Verificar cobertura de código
+
+Ejecuta las pruebas y genera reporte de cobertura:
+
+```bash
+npm run test:coverage
+```
+
+**Salida esperada**: Tabla con porcentajes de cobertura (debe ser ≥80%).
+
+### Ejecutar todo el pipeline localmente
+
+Para simular lo que hace GitHub Actions:
+
+```bash
+npm run lint
+npm test
+npm run test:coverage
+```
+
+O en una sola línea:
+
+```bash
+npm run lint && npm test && npm run test:coverage
+```
 
 ## Estructura del proyecto
 
@@ -103,6 +168,4 @@ Se ha establecido un umbral mínimo de **80%** para:
 
 Este umbral asegura que la mayoría del código está probado, sin ser demasiado estricto para desarrollo inicial.
 
-## Autor
 
-Estudiante de Calidad de Software Avanzado
